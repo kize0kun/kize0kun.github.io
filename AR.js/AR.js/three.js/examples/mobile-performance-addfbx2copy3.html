@@ -299,12 +299,12 @@
         THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
         new THREE.MTLLoader()
             .setPath( '../../data/data/' )
-            .load( 'Scan3D.mtl', function ( materials ) {
+            .load( 'Scan3D_20170904133538.mtl', function ( materials ) {
                 materials.preload();
                 new THREE.OBJLoader()
                     .setMaterials( materials )
                     .setPath( '../../data/data/' )
-                    .load( 'Scan3D.obj', function ( object ) {
+                    .load( 'Scan3D_20170904133538.obj', function ( object ) {
                         object.scale.set(.4, .4, .4);
                         object.position.y = 0.5;
                         arWorldRoot.add( object );
